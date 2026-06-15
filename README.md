@@ -1,6 +1,8 @@
 # Twitch Chat Downloader
 
-> Простое и быстрое приложение для скачивания чата с Twitch VOD. Поддерживает загрузку в TXT, CSV и просмотр прямо в браузере.
+> [🇷🇺 Русский](README.ru.md) · [🇺🇦 Українська](README.uk.md)
+
+A fast and simple desktop app to download chat messages from Twitch VODs. Export to TXT, CSV, or view directly in your browser.
 
 ![Python](https://img.shields.io/badge/Python-3.10%2B-3776AB?style=flat&logo=python)
 ![PyQt6](https://img.shields.io/badge/PyQt6-6.5%2B-41CD52?style=flat&logo=qt)
@@ -10,118 +12,118 @@
   <img src="assets/logo.png" width="128" height="128" alt="Twitch Chat Downloader Logo">
 </p>
 
-## ✨ Преимущества
+## ✨ Features
 
-- **🚀 Быстрая загрузка** — многопоточный парсинг чата: одновременно сканируются разные участки VOD
-- **⚡ Высокая скорость** — до 16 потоков, значительно быстрее однопоточных аналогов
-- **🎯 Точный тайминг** — скачивание чата за указанный промежуток времени (Start / End)
-- **🖼️ Наглядный интерфейс** — предпросмотр VOD с миниатюрой, названием и длительностью
-- **📤 Три формата экспорта** — TXT, CSV или просмотр прямо в браузере с фильтрацией
-- **🌍 Мультиязычность** — русский, украинский, английский (переключаются флагами)
-- **🛑 Отмена загрузки** — кнопка Cancel в любой момент
-- **⚙️ Настройка потоков** — регулируйте количество потоков под своё соединение
+- **🚀 Blazing fast** — multi-threaded chat parsing scans different VOD segments in parallel
+- **⚡ High performance** — up to 16 threads, significantly faster than single-threaded alternatives
+- **🎯 Precise timing** — download chat for a specific time range (Start / End)
+- **🖼️ Live preview** — VOD thumbnail, title, channel, and duration displayed before download
+- **📤 Three export formats** — TXT, CSV, or interactive browser view with search and filtering
+- **🌍 Multi-language** — English, Russian, Ukrainian (switch with flag icons)
+- **🛑 Cancel anytime** — abort download with one click
+- **⚙️ Adjustable threads** — tune thread count to match your connection
 
-## 📸 Скриншоты
+## 📸 Screenshots
 
 <p align="center">
-  <img src="screenshot.png" width="480" alt="Главное окно приложения">
+  <img src="screenshot.png" width="480" alt="Main application window">
 </p>
 
-## 📦 Установка
+## 📦 Installation
 
-### Требования
+### Requirements
 
 - Windows 10 / 11
-- Python 3.10 или выше
-- pip (менеджер пакетов Python)
+- Python 3.10 or higher
+- pip (Python package manager)
 
-### Быстрый старт
+### Quick Start
 
 ```bash
-# 1. Клонировать репозиторий
+# 1. Clone the repository
 git clone https://github.com/ZetHor3/twitch-chat-downloader.git
 cd twitch-chat-downloader
 
-# 2. Установить зависимости
+# 2. Install dependencies
 pip install -r requirements.txt
 
-# 3. Запустить
+# 3. Run
 python main.py
 ```
 
-Или просто запустите `run.bat` — скрипт сам установит зависимости и откроет приложение.
+Or just double-click `run.bat` — it installs dependencies and launches the app automatically.
 
-## 🎮 Использование
+## 🎮 Usage
 
-1. **Вставьте ссылку на VOD** — например: `https://www.twitch.tv/videos/2796577649`
-2. **Дождитесь загрузки превью** — приложение покажет название стрима, канал и длительность
-3. **(Опционально) Укажите тайминг** — Start и End для скачивания части чата
-4. **Нажмите Download Chat** — начнётся многопоточная загрузка
-5. **Экспортируйте результат** — TXT, CSV или Browser (просмотр + поиск/фильтр)
+1. **Paste a VOD URL** — e.g. `https://www.twitch.tv/videos/2796577649`
+2. **Wait for the preview** — the app fetches thumbnail, title, channel and duration
+3. **(Optional) Set time range** — Start and End fields to download only a portion of the chat
+4. **Click Download Chat** — multi-threaded download begins
+5. **Export the result** — TXT, CSV, or Browser (interactive HTML with search/filter)
 
-## 🧵 Настройка потоков
+## 🧵 Thread Configuration
 
-Количество потоков (`Threads`) влияет на скорость загрузки:
+The `Threads` setting controls download speed:
 
-| Потоков | Скорость | Нагрузка на сеть |
-|---------|----------|------------------|
-| 1–2 | Низкая | Минимальная |
-| 4–6 | Средняя | Рекомендуется |
-| 8–16 | Высокая | Для быстрых соединений |
+| Threads | Speed | Network load |
+|---------|-------|-------------|
+| 1–2 | Low | Minimal |
+| 4–6 | Medium | Recommended |
+| 8–16 | High | For fast connections |
 
-## 📁 Структура проекта
+## 📁 Project Structure
 
 ```
 twitch-chat-downloader/
-├── main.py                # Графическое приложение (PyQt6)
-├── chat_downloader.py     # Модуль скачивания чата (GQL)
-├── worker.py              # Фоновый поток загрузки
-├── l10n.py                # Локализация (EN/RU/UK)
-├── requirements.txt       # Зависимости
-├── run.bat                # Быстрый запуск на Windows
+├── main.py                # PyQt6 GUI application
+├── chat_downloader.py     # Chat download module (Twitch GQL)
+├── worker.py              # Background download thread
+├── l10n.py                # Localization (EN/RU/UK)
+├── requirements.txt       # Dependencies
+├── run.bat                # Windows quick launcher
 ├── assets/
-│   ├── logo.png           # Иконка приложения
-│   └── flags/             # SVG-флаги (не используются напрямую)
+│   ├── logo.png           # Application icon
+│   └── flags/             # SVG flag files (not directly used)
 └── README.md
 ```
 
-## 🛠️ Технические детали
+## 🛠️ Technical Details
 
-- **Интерфейс**: PyQt6, кастомный рендеринг циклического прогресса и флагов через QPainter
+- **UI**: PyQt6 with custom circular progress and flag rendering via QPainter
 - **API**: Twitch GQL (persisted query `VideoCommentsByOffsetOrCursor`)
-- **Сканирование**: посегментное (шаг 30 секунд) во избежание блокировок cursor-пагинации
-- **Сеть**: httpx, многопоточность через `ThreadPoolExecutor`
+- **Scanning**: segmented (30-second steps) to avoid cursor pagination blocks
+- **Networking**: httpx, multi-threaded via `ThreadPoolExecutor`
 
-## 📄 Форматы экспорта
+## 📄 Export Formats
 
 ### TXT
 ```
-[00:00] username1: привет!
-[00:05] username2: как дела?
-[00:12] username1: норм
+[00:00] username1: Hello!
+[00:05] username2: How are you?
+[00:12] username1: I'm good
 ```
 
 ### CSV
 ```
 id,username,message,time_in_video,timestamp
-abc123,username1,привет!,0.0,2024-01-01T00:00:00Z
+abc123,username1,Hello!,0.0,2024-01-01T00:00:00Z
 ```
 
 ### Browser
-Встроенная HTML-страница с поиском по тексту, фильтром по пользователям и сортировкой.
+Built-in HTML page with text search, username filtering, and sorting.
 
-## 🌐 Локализация
+## 🌐 Localization
 
-Переключение языка — по нажатию на флаг внизу окна:
+Switch language by clicking a flag icon in the bottom bar:
 - 🇬🇧 **English**
 - 🇷🇺 **Русский**
 - 🇺🇦 **Українська**
 
-## 📜 Лицензия
+## 📜 License
 
-MIT License — делайте что хотите, но упоминание автора приветствуется.
+MIT License — feel free to use, modify, and distribute. Attribution appreciated.
 
-## 👤 Автор
+## 👤 Author
 
 **ZetHor3** — [GitHub](https://github.com/ZetHor3)
 

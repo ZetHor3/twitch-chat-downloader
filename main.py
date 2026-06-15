@@ -240,7 +240,7 @@ class MainWindow(QMainWindow):
                 border-radius: 10px;
             }
         """)
-        self._preview_widget.setFixedHeight(100)
+        self._preview_widget.setFixedHeight(120)
         self._preview_widget.hide()
         pw_layout = QHBoxLayout(self._preview_widget)
         pw_layout.setContentsMargins(5, 5, 0, 5)
@@ -260,7 +260,7 @@ class MainWindow(QMainWindow):
         self._preview_title = QLabel("")
         self._preview_title.setStyleSheet("font-size: 14px; font-weight: 600; color: #e6edf3;")
         self._preview_title.setWordWrap(True)
-        self._preview_title.setFixedHeight(20)
+        self._preview_title.setFixedHeight(40)
         self._preview_channel = QLabel("")
         self._preview_channel.setStyleSheet("font-size: 12px; color: #8b949e;")
         self._preview_channel.setFixedHeight(18)
