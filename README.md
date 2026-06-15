@@ -29,6 +29,10 @@ A fast and simple desktop app to download chat messages from Twitch VODs. Export
   <img src="preview.png" width="480" alt="Main application window">
 </p>
 
+<p align="center">
+  <img src="preview_chat_browser_export.png" width="480" alt="Browser export view">
+</p>
+
 ## 📦 Installation
 
 ### Requirements

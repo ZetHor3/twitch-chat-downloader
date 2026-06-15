@@ -29,6 +29,10 @@
   <img src="preview.png" width="480" alt="Главное окно приложения">
 </p>
 
+<p align="center">
+  <img src="preview_chat_browser_export.png" width="480" alt="Просмотр чата в браузере">
+</p>
+
 ## 📦 Установка
 
 ### Требования

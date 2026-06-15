@@ -20,6 +20,11 @@ Thumbs.db
 venv/
 .venv/
 env/
+build_venv/
+
+# PyInstaller
+dist/
+*.spec
 
 # Project specific
 ay.png

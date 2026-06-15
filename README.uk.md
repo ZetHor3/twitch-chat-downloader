@@ -29,6 +29,10 @@
   <img src="preview.png" width="480" alt="Головне вікно програми">
 </p>
 
+<p align="center">
+  <img src="preview_chat_browser_export.png" width="480" alt="Перегляд чату в браузері">
+</p>
+
 ## 📦 Встановлення
 
 ### Вимоги
