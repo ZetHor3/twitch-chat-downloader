@@ -44,7 +44,7 @@
 ### Швидкий старт
 
 ```bash
-git clone https://github.com/ZetHor3/twitch-chat-downloader.git
+git clone https://github.com/ZetHor3/TwitchChatDownloader.git
 cd twitch-chat-downloader
 pip install -r requirements.txt
 python main.py
